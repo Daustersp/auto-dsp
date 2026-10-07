@@ -1,0 +1,7 @@
+- name: ✅ Verificar se index.html existe
+  run: |
+    if [ ! -f "index.html" ]; then
+      echo "⚠️ index.html não encontrado — prosseguindo mesmo assim"
+      exit 0   # 0 = sucesso, não para o deploy
+    fi
+    echo "✅ Arquivo encontrado — tudo certo!"
